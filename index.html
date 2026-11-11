@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1 title="Student Profile Management System">
+            Student Management System
+        </h1>
+        <p>Manage and view student information.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section" aria-labelledby="form-title">
+
+            <h2 id="form-title">Add Student</h2>
+
+            <form id="studentForm">
+
+                <label for="studentName">Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name"
+                    required
+                >
+
+                <label for="studentId">Student ID</label>
+                <input
+                    type="text"
+                    id="studentId"
+                    placeholder="Enter student ID"
+                    required
+                >
+
+                <label for="department">Department</label>
+                <select id="department" required>
+                    <option value="">Select department</option>
+                    <option value="Software Engineering">
+                        Software Engineering
+                    </option>
+                    <option value="Computer Science">
+                        Computer Science
+                    </option>
+                    <option value="Information Technology">
+                        Information Technology
+                    </option>
+                </select>
+
+                <button type="submit" class="btn primary">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="student-section" aria-labelledby="students-title">
+
+            <h2 id="students-title">Student Profiles</h2>
+
+            <p id="status" role="status" aria-live="polite">
+                No student selected.
+            </p>
+
+            <div id="studentList" class="student-list">
+
+                <article
+                    class="student-card"
+                    id="student-101"
+                    data-id="101"
+                    data-name="Abebe"
+                    data-department="Software Engineering"
+                >
+
+                    <h3 class="student-name" contenteditable="true">
+                        Abebe
+                    </h3>
+
+                    <p>Student ID: SE101</p>
+                    <p>Department: Software Engineering</p>
+
+                    <button class="btn view-btn" type="button">
+                        View Profile
+                    </button>
+
+                </article>
+
+                <article
+                    class="student-card"
+                    id="student-102"
+                    data-id="102"
+                    data-name="Almaz"
+                    data-department="Computer Science"
+                >
+
+                    <h3 class="student-name" contenteditable="true">
+                        Almaz
+                    </h3>
+
+                    <p>Student ID: CS102</p>
+                    <p>Department: Computer Science</p>
+
+                    <button class="btn view-btn" type="button">
+                        View Profile
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="note-section">
+
+            <h2>Editable Notes</h2>
+
+            <div class="notes" contenteditable="true">
+                Click here and write your notes.
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Management System</p>
+    </footer>
+
+</body>
+</html>
