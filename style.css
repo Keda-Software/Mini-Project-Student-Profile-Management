@@ -1,0 +1,171 @@
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Sections */
+.form-section,
+.student-section,
+.note-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #123c69;
+    margin-bottom: 20px;
+}
+
+/* Form */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+.notes:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.view-btn {
+    background: #0f766e;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+/* Student cards */
+.student-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.student-card {
+    background: #f8fafc;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.student-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    margin: 6px 0;
+}
+
+/* Selected card */
+.student-card.selected {
+    border: 2px solid #0f766e;
+    background: #ecfdf5;
+}
+
+/* Editable notes */
+.notes {
+    min-height: 100px;
+    padding: 15px;
+    border: 1px dashed #2563eb;
+    border-radius: 6px;
+    background: #f8fafc;
+}
+
+/* Status message */
+#status {
+    margin-bottom: 15px;
+    color: #0f766e;
+}
+
+/* Footer */
+footer {
+    background: #123c69;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Keyboard focus */
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .student-list {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .form-section,
+    .student-section,
+    .note-section {
+        padding: 18px;
+    }
+}
